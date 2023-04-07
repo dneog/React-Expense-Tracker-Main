@@ -1,0 +1,11 @@
+.expense-Item{
+    font-size: 20px;
+   color: green;
+   display: flex;
+   padding: 10px;
+  
+ 
+}
+.expense-Item_description{
+    padding: 0px 30px;
+}
