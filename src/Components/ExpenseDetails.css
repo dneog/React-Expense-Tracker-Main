@@ -1,0 +1,10 @@
+.details{
+    display: flex;
+   
+}
+.secondDetails{
+    padding: 0px 5px;
+}
+.thirdDetails{
+    padding: 0px 20px;
+}
