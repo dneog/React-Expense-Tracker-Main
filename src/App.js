@@ -1,5 +1,7 @@
 
-import Expenselist from './Components/Expenselist';
+import Expenselist from './Components/Expenses/Expenselist';
+
+const App=()=> {
 const expenses= [
   {
   id: 'e1',
@@ -24,7 +26,7 @@ const expenses= [
   },
 ]
 
-function App() {
+
   return (
     <div>
     <Expenselist name={expenses[0].name} location={expenses[0].location}  amount={expenses[0].amount}  date={expenses[0].date}></Expenselist>
