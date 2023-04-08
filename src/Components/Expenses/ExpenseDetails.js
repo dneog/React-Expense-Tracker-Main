@@ -8,7 +8,7 @@ const ExpenseDetails=(props)=>{
     return(
         <div className="details">
             <div className="details2">
-            <div className="firstDetails">{location} :</div>
+            {/* <div className="firstDetails">{location} </div> */}
             <div className="secondDetails">{titles}</div>
             </div>
             <div className="thirdDetails">${amounts}</div>

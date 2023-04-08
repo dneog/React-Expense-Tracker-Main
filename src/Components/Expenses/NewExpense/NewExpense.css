@@ -1,0 +1,11 @@
+.new-expense{
+   
+   display: flex;
+   background: #dcdcdc;
+  margin: 0px 50px 0px 50px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 5px;
+    padding: 10px;
+ 
+}

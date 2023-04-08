@@ -11,7 +11,7 @@ const Expenselist=(props)=>{
      event.target.parentElement.parentElement.remove();
 
     }
-    const [amount, setTitle]= useState(props.amount);
+    let [amount, setTitle]= useState(props.amount);
     const clickHandlerAdd=()=>{
       
        setTitle('100')
@@ -24,7 +24,10 @@ const Expenselist=(props)=>{
           <ExpenseDate date={props.date} />
           </div>
            <div className="expense-details">
-            <ExpenseDetails location={props.location} name={props.name} amount={amount}  />
+            <ExpenseDetails  name={props.name} amount={amount} />
+
+           
+
            
             <button onClick={clickHandlerAdd}>Add</button>
             <button onClick={clickHandler}>Delete Expense</button>
