@@ -7,9 +7,10 @@ const ExpenseDetails=(props)=>{
     const amounts= props.amount;
     return(
         <div className="details">
-            <div className="">{location} :</div>
+            <div className="details2">
+            <div className="firstDetails">{location} :</div>
             <div className="secondDetails">{titles}</div>
-           
+            </div>
             <div className="thirdDetails">$ {amounts}</div>
 
           

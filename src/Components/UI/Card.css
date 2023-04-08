@@ -1,6 +1,15 @@
 .card{
    border: 1px solid black;
    border-radius: 5px;
-   margin: 5px;
-   background: #e9fff5;
+   margin: 7px;
+   background: #dffff0;
+   width: 60%;
+  align-items: center;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+ 
+ 
 }

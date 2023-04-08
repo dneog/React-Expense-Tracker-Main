@@ -1,11 +1,18 @@
 .expense-Item{
     font-size: 20px;
-   color: green;
+   color: rgb(0, 0, 0);
    display: flex;
    padding: 10px;
-  
- 
+   
+ justify-content: space-between;
+
 }
-.expense-Item_description{
-    padding: 0px 30px;
+.expense-details{
+   padding: 0px 20px;
+   display: flex;
+   
+}
+.expense-date{
+ padding: 0px 20px;
+ text-align: center;
 }
