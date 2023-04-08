@@ -11,7 +11,7 @@ const ExpenseDetails=(props)=>{
             <div className="firstDetails">{location} :</div>
             <div className="secondDetails">{titles}</div>
             </div>
-            <div className="thirdDetails">$ {amounts}</div>
+            <div className="thirdDetails">${amounts}</div>
 
           
         </div>

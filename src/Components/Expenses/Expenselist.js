@@ -1,11 +1,21 @@
+import React, {useState} from 'react';
 import ExpenseDate from './ExpenseDate';
 import ExpenseDetails  from './ExpenseDetails';
 import './Expenselist.css';
 import Card from '../UI/Card';
 
 const Expenselist=(props)=>{
+    
+    console.log(useState(props.name))
     const clickHandler=(event)=>{
-     event.target.parentElement.parentElement.remove()
+     event.target.parentElement.parentElement.remove();
+
+    }
+    const [amount, setTitle]= useState(props.amount);
+    const clickHandlerAdd=()=>{
+      
+       setTitle('100')
+
     }
   
     return (
@@ -14,8 +24,9 @@ const Expenselist=(props)=>{
           <ExpenseDate date={props.date} />
           </div>
            <div className="expense-details">
-            <ExpenseDetails location={props.location} name={props.name} amount={props.amount}  />
+            <ExpenseDetails location={props.location} name={props.name} amount={amount}  />
            
+            <button onClick={clickHandlerAdd}>Add</button>
             <button onClick={clickHandler}>Delete Expense</button>
         
             </div>
