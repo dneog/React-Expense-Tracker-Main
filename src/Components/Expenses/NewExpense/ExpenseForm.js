@@ -16,11 +16,19 @@ const ExpenseForm =()=>{
         SetEnteredDate(event.target.value)
     }
   
-      
+    const submitHandler = (event)=>{
+        event.preventDefault();
+        const expenseData={
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        }
+        console.log(expenseData)
+    }  
        
    
     return (
-    <form id='form' action="">
+    <form onSubmit={submitHandler}>
     <div className='main'>
     <div className='mainForm'>
     <div className='expense-form1'>
