@@ -3,6 +3,7 @@ import ExpenseDetails from './Components/Expenses/ExpenseDetails';
 import Expenselist from './Components/Expenses/Expenselist';
 import NewExpense from './Components/NewExpense/NewExpense';
 import Expense from './Components/Expenses/Expenses';
+import ExpenseFilter from './Components/Expenses/ExpenseFilter';
 
 const dummyExpenses= [
   {

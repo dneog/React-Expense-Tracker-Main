@@ -9,10 +9,10 @@ const ExpenseFilter = (props)=> {
     return(
         <Card className='filter'>
             <div className='filter2'>
-                <label  htmlFor="" onChange={dropdownChangeHandler}>Filter By Year</label>
+                <label  htmlFor="">Filter By Year</label>
                </div>
               <div className='filter3'> 
-                <select  value={props.selected}>
+                <select  value={props.selected}  onChange={dropdownChangeHandler}>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
