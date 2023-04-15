@@ -7,7 +7,7 @@
  
 }
 .expense-details{
-   padding: 0px 30px;
+   padding: 0px 10px;
    display: flex;
   align-self: center;
   
@@ -19,4 +19,13 @@
 }
 button{
    margin-right: 4px;
+}
+.name{
+   font-size: 20px;
+   padding-right: 20px;
+   
+}
+.amount{
+   font-size: 20px;
+   padding-right: 20px;
 }

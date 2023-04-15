@@ -4,6 +4,8 @@ import Expenselist from './Expenselist';
 import ExpenseDetails from './ExpenseDetails';
 import ExpenseDate from './ExpenseDate';
 import ExpenseForm from '../NewExpense/ExpenseForm';
+import ExpenseFilter from './ExpenseFilter';
+import NewExpense from '../NewExpense/NewExpense';
 
 function Expense(props){
     const [filteredYear, setFilteredYear] = useState('2020');
@@ -13,7 +15,15 @@ function Expense(props){
     return(
         <>
         <ExpenseFilter selected={filteredYear} onChangeFilter= {filterChangeHandler} />
-    <Expenselist
+        {props.items.map((expense) => (
+            <Expenselist
+            key= {expense.id} 
+            name={expense.name}
+            amount = {expense.amount}
+            date = {expense.date}
+            />
+        ))}
+    {/* <Expenselist
         name = {props.items[0].name}
         amount = {props.items[0].amount}
         date={props.items[0].date}
@@ -27,7 +37,7 @@ function Expense(props){
         name = {props.items[2].name}
         amount = {props.items[2].amount}
         date={props.items[2].date}
-    />
+    /> */}
 
    
    

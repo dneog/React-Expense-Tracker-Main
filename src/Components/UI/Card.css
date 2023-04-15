@@ -14,3 +14,18 @@
  
  
 }
+.filter{
+  border: 0;
+  background: #00000000;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+ 
+  
+}
+.filter2{
+  padding-right: 10px;
+}
+.filter3{
+  padding-left: 10px;
+}
