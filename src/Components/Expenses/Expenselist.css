@@ -6,27 +6,37 @@
    
  
 }
-.expense-details{
-   
-  
-  
-  
-   
-}
+
 .expense-date{
  padding: 0px 20px;
  text-align: center;
+ 
 }
 button{
-   margin-right: 4px;
+   margin-right: 10px;
   
 }
 .name{
-   font-size: 20px;
+   font-size: 23px;
    padding-right: 20px;
+   font-family: Arial, Helvetica, sans-serif;
    
 }
 .amount{
    font-size: 20px;
-   padding-right: 20px;
+   padding-right: 25px;
+  
+  
+}
+.expenseName{
+   display: flex;
+  
+}
+
+.btn{
+   border-radius: 5px;
+   cursor: pointer;
+   padding: 6px 10px;
+   font-size: 17px;
+   border: 1px solid rgba(0, 0, 0, 0.815);
 }

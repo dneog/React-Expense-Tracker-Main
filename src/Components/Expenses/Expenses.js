@@ -6,6 +6,7 @@ import ExpenseDate from './ExpenseDate';
 import ExpenseForm from '../NewExpense/ExpenseForm';
 import ExpenseFilter from './ExpenseFilter';
 import NewExpense from '../NewExpense/NewExpense';
+import './Expenses.css';
 
 function Expense(props){
     const [filteredYear, setFilteredYear] = useState('2022');
@@ -19,14 +20,21 @@ function Expense(props){
     return(
         <>
         <ExpenseFilter selected={filteredYear} onChangeFilter= {filterChangeHandler} />
-        {FilteredExpenses.map((expense) => (
+        {FilteredExpenses.length === 0 && <p>No Expenses Found</p>}
+       
+        {FilteredExpenses.length > 0 && 
+            FilteredExpenses.map((expense) => (
             <Expenselist
             key= {expense.id} 
             name={expense.name}
             amount = {expense.amount}
             date = {expense.date}
             />
-        ))}
+        ))
+        }
+        {FilteredExpenses.length === 1 && <p className='below'>Only single Expense here. Please add more...</p>}
+
+      
     {/* <Expenselist
         name = {props.items[0].name}
         amount = {props.items[0].amount}

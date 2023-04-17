@@ -28,14 +28,17 @@ const Expenselist=(props)=>{
           <ExpenseDate date={props.date} />
           </div>
            
-          
-            <h3 className='name'>{props.name}</h3>
+            {/* <div className='expenseName'> */}
+            <h1 className='name'>{props.name}</h1>
+            <div className='am'>
+            <h1 className='amount'>$ {amount}</h1>
+            {/* </div> */}
            
-            <h3 className='amount'>$ {amount}</h3>
            
-            <button className='bt' onClick={clickHandlerAdd}>Add</button>
+            <button className='btn' onClick={clickHandlerAdd}>Add</button>
             
-            <button onClick={clickHandler}>Delete Expense</button>        
+            <button className='btn' onClick={clickHandler}>Delete Expense</button>   
+            </div>     
                    
         </Card>
     )

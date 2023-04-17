@@ -16,7 +16,7 @@ const dummyExpenses= [
   {
   id: 'e2',
   name: 'Books',
-  date:new Date(2021, 2, 28),
+  date:new Date(2022, 2, 28),
   amount: 550
   },
 
