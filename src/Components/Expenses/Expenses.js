@@ -7,6 +7,9 @@ import ExpenseForm from '../NewExpense/ExpenseForm';
 import ExpenseFilter from './ExpenseFilter';
 import NewExpense from '../NewExpense/NewExpense';
 import './Expenses.css';
+import Chart from '../Chart/Chart'
+import ExpenseChart from './ExpensesChart';
+
 
 function Expense(props){
     const [filteredYear, setFilteredYear] = useState('2022');
@@ -14,14 +17,15 @@ function Expense(props){
         setFilteredYear(selectedYear);
     }
 
-    const FilteredExpenses= props.items.filter( expense=> {
+    const FilteredExpenses= props.items.filter( (expense)=> {
             return expense.date.getFullYear().toString()=== filteredYear
     })
     return(
         <>
         <ExpenseFilter selected={filteredYear} onChangeFilter= {filterChangeHandler} />
-        {FilteredExpenses.length === 0 && <p>No Expenses Found</p>}
        
+       
+        <ExpenseChart expenses={FilteredExpenses} />
         {FilteredExpenses.length > 0 && 
             FilteredExpenses.map((expense) => (
             <Expenselist
@@ -32,8 +36,10 @@ function Expense(props){
             />
         ))
         }
+        {FilteredExpenses.length === 0 && <p>No Expenses Found</p>}
         {FilteredExpenses.length === 1 && <p className='below'>Only single Expense here. Please add more...</p>}
-
+        
+        {/* <ExpenseData items={FilteredExpenses} /> */}
       
     {/* <Expenselist
         name = {props.items[0].name}
